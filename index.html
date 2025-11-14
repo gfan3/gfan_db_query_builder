@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>LMPS Databricks Query Builder</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -37,28 +37,84 @@
               <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
 
     <div class="container my-5">
-      <h1>LMPS Databricks Query Creator</h1>
+      <h1>LMPS Databricks Query Builder</h1>
       <div class="col-lg-8 px-0">
         <p class="fs-5">You've successfully loaded up the Bootstrap starter example. It includes <a href="https://getbootstrap.com/">Bootstrap 5</a> via the <a href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr CDN</a> and includes an additional CSS and JS file for your own code.</p>
         <p>Feel free to download or copy-and-paste any parts of this example.</p>
 
         <hr class="col-1 my-4">
 
+        <div class="container">
+        <h2 class="fs-6">Select View</h2>
+
+        <div class="container my-3">
+
+        <!-- Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownBtn" data-bs-toggle="dropdown">
+            Choose an option
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-value="Option 1">Option 1</a></li>
+            <li><a class="dropdown-item" href="#" data-value="Option 2">Option 2</a></li>
+            <li><a class="dropdown-item" href="#" data-value="Option 3">Option 3</a></li>
+          </ul>
+        </div>
+
+
+</div>
+        </div>
+
+        <hr class="col-1 my-4">
+        <div class="container">
+          <div class="row mb-2">
+            <div class="col-3">
+              <input type="checkbox" id="col1">
+              <label for="col1">Column 1</label>
+            </div>
+            <div class="col-3">
+              <input type="checkbox" id="col2">
+              <label for="col2">Column 2</label>
+            </div>
+              <div class="col-3">
+              <input type="checkbox" id="col3">
+              <label for="col3">Column 3</label>
+            </div>
+            <div class="col-3">
+              <input type="checkbox" id="col4">
+              <label for="col3">Column 4</label>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="col-1 my-4">
+
         <a href="https://getbootstrap.com" class="btn btn-primary">Read the Bootstrap docs</a>
         <a href="https://github.com/twbs/examples" class="btn btn-secondary">View on GitHub</a>
+
+      </div>
+    </div>
+
+    <div class ="container my-5">
+      <h1>Query Output</h1>
+        <div class="p-3 mb-3 bg-body-secondary border rounded">
+        <p id="queryOutputText" class="my-1">This is a grey box using Bootstrap utilities.</p>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
+
+
+<!-- Put a plus beside the Column name. That will create a modal to add conditions -->
+<!-- Add a button to generate the query based on selected columns and conditions -->
